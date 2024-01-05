@@ -28,7 +28,7 @@ const Auth = () => {
 
     const { username, password, phoneNumber, avatarURL } = form
 
-    const URL = 'https://medical-pager-backend-fys5.onrender.com'
+    const URL = 'http://localhost:5000/auth'
 
     const {
       data: { token, userId, hashedPassword, fullName },

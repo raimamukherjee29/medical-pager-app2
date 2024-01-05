@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 5000
 
 require('dotenv').config()
 
+const path = require('path')
+
 const accountSid = process.env.TWILIO_ACCOUNT_SID
 const authToken = process.env.TWILIO_AUTH_TOKEN
 const messagingServiceSid = process.env.TWILIO_MESSAGING_SERVICE_SID
@@ -46,5 +48,10 @@ app.post('/', (req, res) => {
 })
 
 app.use('/auth', authRoutes)
+
+app.get('/', (req, res) => {
+  app.use(express.static(path.resolve(__dirname, 'client', 'build')))
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+})
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
