@@ -4,7 +4,7 @@ const app = express()
 
 app.use(cors())
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with the actual origin of your React app
+  origin: 'https://medical-pager-app2-cxqd.vercel.app/', // Replace with the actual origin of your React app
   credentials: true,
 };
 
