@@ -28,7 +28,7 @@ const Auth = () => {
 
     const { username, password, phoneNumber, avatarURL } = form
 
-    const URL = 'https://medical-pager-app2-cxqd.vercel.app/'
+    const URL = 'https://medical-pager-app2-cxqd.vercel.app/auth'
 
     const {
       data: { token, userId, hashedPassword, fullName },
